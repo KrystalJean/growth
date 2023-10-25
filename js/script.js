@@ -11,8 +11,24 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const groupBody = group.querySelector('.faq-group-body');
     const icon = groupHeader.querySelector('i');
 
-
+    // Toggle icon
     icon.classList.toggle('rotate-plus-to-x');
+
+    // Toggle FAQ body visibility
+    groupBody.classList.toggle('open');
+
+    // Conditions for one group open at a time
+    const groupings = faqContent.querySelectorAll('.faq-group');
+
+    groupings.forEach( grouping => {
+      if (grouping !== group) {
+        const groupingBody = grouping.querySelector('.faq-group-body');
+        const groupingIcon = grouping.querySelector('.faq-group-header i');
+
+        groupingBody.classList.remove('open');
+        groupingIcon.classList.remove('rotate-plus-to-x')
+      }
+    })
   })
 
 
