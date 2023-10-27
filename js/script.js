@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const groupBody = group.querySelector('.faq-group-body');
     const icon = groupHeader.querySelector('i');
 
-    // Toggle icon
+    // Toggle FAQ icon
     icon.classList.toggle('rotate-plus-to-x');
 
     // Toggle FAQ body visibility
     groupBody.classList.toggle('open');
 
-    // Conditions for one group open at a time
+    // Conditions for one FAQ group open at a time
     const groupings = faqContent.querySelectorAll('.faq-group');
 
     groupings.forEach( grouping => {
@@ -34,11 +34,18 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 // Mobile Menu
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburgerButton = document.querySelector('.hamburger-button');
+  const hamburgerButton = document.getElementById('hamburger-button');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const hamburgerLineTop = document.getElementById('hamburger-line-top');
+  const hamburgerLineBottom = document.getElementById('hamburger-line-bottom');
 
-  hamburgerButton.addEventListener('click', ()=> mobileMenu.classList.toggle('active'));
+  // hamburgerButton.addEventListener('click', ()=>  mobileMenu.classList.toggle('active'));
 
-
+  hamburgerButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    hamburgerLineTop.classList.toggle('rotate-line-1');
+    hamburgerLineBottom.classList.toggle('rotate-line-2');
+    hamburgerButton.classList.toggle('fixed');
+  })
 
 })

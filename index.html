@@ -47,11 +47,10 @@
         </ul>
       </div>
 
-      <!-- Hamurger button -->
-      <button class="hamburger-button">
-        <div class="hamburger-line rotate-line-1"></div>
-        <div class="hamburger-line rotate-line-2"></div>
-        <!-- <div class="hamburger-line"></div> -->
+      <!-- Hamburger button -->
+      <button id="hamburger-button" class="hamburger-button">
+        <div id="hamburger-line-top" class="hamburger-line"></div>
+        <div id="hamburger-line-bottom" class="hamburger-line"></div>
       </button>
       <div class="mobile-menu">
         <ul>
@@ -337,12 +336,11 @@
   <!-- Footer Section -->
   <footer class="footer bg-dark">
     <div class="container">
+      <a href="index.html">
+        <img src="images/logo-white.png" alt="logo">
+      </a>
       <div class="footer-grid">
-
         <div class="column">
-          <a href="index.html">
-            <img src="images/logo-white.png" alt="logo">
-          </a>
           <div class="card">
             <h4>Subscribe to Newsletter</h4>
             <p class="text-sm">
@@ -350,11 +348,10 @@
             </p>
             <form action="">
               <input type="email" id="email" placeholder="Enter your email">
-              <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
             </form>
           </div>
-          <i class="fab fa-linkedin"></i>
-          <i class="fab fa-twitter"></i>
+
         </div>
         <div class="column">
           <h4>Company</h4>
@@ -378,8 +375,12 @@
             <li><a href="#">hello@growthapp.com</a></li>
           </ul>
         </div>
-
       </div>
+      <div class="social-icons">
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+      <p class="text-sm copyright">© <script>document.write(new Date().getFullYear())</script> Growth. All rights reserved</p>
     </div>
   </footer>
 
